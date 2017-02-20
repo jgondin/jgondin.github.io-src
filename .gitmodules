@@ -1,0 +1,6 @@
+[submodule "output"]
+	path = output
+	url = https://github.com/jgondin/jgondin.github.io.git
+[submodule "themes"]
+	path = themes
+	url = https://github.com/lucachr/pelican-mg.git
