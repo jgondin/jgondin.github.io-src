@@ -12,7 +12,7 @@ SITEURL = 'http://localhost:8000'
 
 #META_IMAGE = SITEURL + "static/img/og_logo.jpg"
 #META_IMAGE_TYPE = "image/jpeg"
-FAVICON_PATH = '/theme/images/icons/linkedin.png'
+FAVICON_PATH = '/content/images/favicon.icon'
 PATH = 'content'
 
 
@@ -59,8 +59,19 @@ DEFAULT_PAGINATION = 10
 # Theme Settings
 TAG_SAVE_AS = ''
 AUTHOR_SAVE_AS = ''
-PAGINATED_DIRECT_TEMPLATES = ( 'index','categories', 'pages')
-STATIC_PATHS = ['pdfs']
+PAGINATED_DIRECT_TEMPLATES = ( 'index', 'pages')
+STATIC_PATHS = ['pdfs','images','extra']
+
+STATIC_PATHS = [
+    'images', 
+    'extra/robots.txt', 
+    'extra/favicon.ico'
+]
+EXTRA_PATH_METADATA = {
+    'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/favicon.ico': {'path': 'favicon.ico'}
+}
+
 
 DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_PAGES_ON_MENU = False
@@ -88,8 +99,10 @@ TWITTER_USERNAME = 'j_gondin'
 LINKEDIN = 'jgondin'
 
 #Plugin settings
+"""
 MARKUP = ('md', 'ipnb')
 
-PLUGIN_PATH = 'plugins'
+PLUGIN_PATHS = ['plugins/ipynb']
 PLUGINS = ['ipynb.markup']
 IGNORE_FILES = ['.ipynb_checkpoints']
+"""
